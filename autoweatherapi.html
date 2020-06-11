@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather API</title>
+
+  <style>
+    #currentWeather {
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+
+    #button {
+      background: rgb(127,149,255);
+      background: linear-gradient(90deg, rgba(127,149,255,1) 4%, rgba(0,121,255,1) 100%);
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color:whitesmoke;
+    }
+  </style>
+</head>
+<body>
+  <!-- <p>Would you like my bootleg site to access your location?</p>
+  <button id='geolocation-button'>Allow</button>
+  <button id='geolocation-button'>Block</button> -->
+
+  <br>
+  <input id='zipCode' type='text' placeholder='Enter Your Zip Code'>
+  <button id="button">Click For The Weather</button>
+  <div id='currentWeather'></div>
+
+ 
+
+  <script src='autoweatherapi.js'></script>
+</body>
+</html>
