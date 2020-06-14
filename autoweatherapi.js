@@ -17,9 +17,11 @@ document.addEventListener('DOMContentLoaded', function () {
       // console.log(coordPosition);
       const lat = position.coords.latitude;
       const lon = position.coords.longitude;
+      const townName = 'Johnston';
    
-
-      const combinedUrl = `http://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}`;
+      // lat and lon url
+      // const combinedUrl = `http://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}`;
+      const combinedUrl = `https://api.openweathermap.org/data/2.5/weather?q=${townName}&appid=${apiKey}`;
       const xhr = new XMLHttpRequest();
 
       xhr.open('GET', combinedUrl, true);
@@ -31,9 +33,6 @@ document.addEventListener('DOMContentLoaded', function () {
   
         console.log(parsedResponseText);
   
-  
-    
-  
         console.log(parsedResponseText.name);
         const cityName = parsedResponseText.name;
   
@@ -43,11 +42,11 @@ document.addEventListener('DOMContentLoaded', function () {
         console.log(fTemp);
   
         const tempOutput = `<h1>The temperature in ${cityName} is ${fTemp} F</h1>`;
-        document.getElementById('currentWeather').innerHTML = tempOutput;
+        
   
          //℉=((K-273.15)*1.8)+32
   
-        console.log(parsedResponseText.main.temp);
+        // console.log(parsedResponseText.main.temp); // displays kelvin temp
         console.log(parsedResponseText.weather[0].main);
   
        
